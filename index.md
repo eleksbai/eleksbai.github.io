@@ -4,6 +4,16 @@
 
 [文章二](/docs/two.md)
 
-{% for post in site.temps %}
+### 测试开始
+{% for post in site._post %}
+[文档]({{post}})
+
+{% endfor %}
+{% for post in site._post %}
 [文档]({{post}})
 {% endfor %}
+{% for post in site._post %}
+[文档]({{post}})
+
+{% endfor %}
+### 测试开始
