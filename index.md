@@ -5,15 +5,20 @@
 [文章二](/docs/two.md)
 
 ### 测试开始
-{% for post in site._post %}
-[文档]({{post}})
+哈啊哈
 
-{% endfor %}
-{% for post in site._post %}
-[文档]({{post}})
-{% endfor %}
-{% for post in site._post %}
-[文档]({{post}})
 
+{% for post in site._post %}
+[文档]({{post}})
 {% endfor %}
+
+{% for post in site._post %}
+[文档]({{post}})
+{% endfor %}
+
+{% for post in site._post %}
+[文档]({{post}})
+{% endfor %}
+
+
 ### 测试开始
