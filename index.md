@@ -1,7 +1,5 @@
----
-　　layout: default
-　　title: 我的Blog
----
+
 # 首页
-{% for post in site.posts %}
-{{ post.date | date_to_string }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}
+[文章一](/_posts/2018-01-17-hello-world.md)
+
+[文章二](/docs/two.md)
