@@ -5,6 +5,7 @@ You can use the [editor on GitHub](https://github.com/eleksbai/eleksbai.github.i
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
 # 文章列表
+[首页](index.md)
 [文章一](/_posts/2018-01-17-hello-world.md)
 
 [文章二](/docs/two.md)
