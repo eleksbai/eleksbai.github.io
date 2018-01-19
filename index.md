@@ -11,11 +11,12 @@
 哈啊哈
 
 
-{% for post in site._post %}
-[文档]({{post}})
+{% for post in site.post %}
+我们的
+[{{title}]({{post}})
 {% endfor %}
 
-{% for post in site._post %}
+{% for temp in site._tempst %}
 [文档]({{post}})
 {% endfor %}
 

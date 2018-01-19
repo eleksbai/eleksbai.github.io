@@ -3,3 +3,5 @@ theme: jekyll-theme-merlot
 collections:
 - docs
 - my_collection
+- _post
+- post
