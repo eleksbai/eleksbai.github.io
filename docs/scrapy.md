@@ -1,6 +1,6 @@
 # scrapy 教程
 ## 核心组件信息统计
-
+查看控制台得出的一些数据信息
 ```
 ons.telnet] DEBUG: Telnet console listening on 127.0.0.1:6024
 engine.slot.inprogress
