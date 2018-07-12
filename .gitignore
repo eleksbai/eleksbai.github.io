@@ -1,3 +1,6 @@
+# jekyll temp file https://jekyllrb.com/docs/structure/
+_site/
+.jekyll-metadata/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
