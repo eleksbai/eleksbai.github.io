@@ -8,7 +8,7 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 [首页](index.md)
 [文章一](/_posts/2018-01-17-hello-world.md)
 
-[文章二](/docs/two.md)
+[文章二](/study_days/docs/two.md)
 [gitpage本地调试](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)
 ### Markdown
 

@@ -1,8 +1,8 @@
 ---
 layout: default
-title:  测试主题
+title:  测试文件命名
 date:   2018-08-13 16:16:01 -0600
-categories: jekyll update
+categories: test_file
 ---
 # 链接生成规则 类目 
 * 》 类目 》 年 》  月 》 日

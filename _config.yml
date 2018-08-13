@@ -1,2 +1,15 @@
+# 自动生成索引
+lsi: true
+
+# 允许展示未来的文件
+future: true
+port: 4000
+#timezone: Europe/London
+
+# 排除的文件夹
+exclude:
+  - study_days
+
+
 theme: jekyll-theme-merlot
 repository: eleksbai.github.io/eleksbai.github.io
