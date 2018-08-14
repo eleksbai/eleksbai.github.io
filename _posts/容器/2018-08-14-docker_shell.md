@@ -93,7 +93,7 @@ services:
     ports:
     - "3306:3306"
     environment:
-    - MYSQL_ROOT_PASSWORD=123456 
+    - MYSQL_ROOT_PASSWORD=123456
 
   rabbitmq:
     image: "rabbitmq:3-management"
