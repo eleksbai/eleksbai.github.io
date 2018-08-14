@@ -1,3 +1,5 @@
+theme: jekyll-theme-merlot
+repository: eleksbai.github.io/eleksbai.github.io
 # 自动生成索引
 lsi: true
 
@@ -9,7 +11,3 @@ port: 4000
 # 排除的文件夹
 exclude:
   - study_days
-
-
-theme: jekyll-theme-merlot
-repository: eleksbai.github.io/eleksbai.github.io
