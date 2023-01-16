@@ -1,4 +1,5 @@
 # Eleksbai的在线博客
+[在线访问](https://eleksbai.github.io/)
 框架: hexo
 主题: next
 开发分支: master
