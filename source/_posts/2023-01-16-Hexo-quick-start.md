@@ -56,7 +56,10 @@ https://github.com/theme-next/hexo-theme-next
 [next 主题设置教程](https://theme-next.js.org/docs/theme-settings/)
 ```bash
 cd <hexo project>
+# 这个部署方式容易出问题, 适合主题开发人员用, 采用npm部署
 git clone https://github.com/theme-next/hexo-theme-next themes/next
+# 采用npm安装主题
+npm install hexo-theme-next
 ```
 
 编辑`_config.yml`
