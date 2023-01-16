@@ -33,7 +33,7 @@ vuepress 官方开发的评论插件，利用git平台的issue功能来实现评
 @vssue/api-gitee-v5插件在调用码云接口时采用的回调地址为当前的url地址，如http://localhost:8080/2022/10/29/vuepress-quick-start/  
 而一般码云上配置的应用回调地址为http://localhost:8080/。这两个的url不匹配导致了码云评论插件无法正常使用。
 [官方demo](https://vssue.js.org/zh/demo/gitee.html)也存在这个问题，但是没有维护了。
-![码云接口回调异常](/gitee-callback-error.png)
+![码云接口回调异常](/images/2022/gitee-callback-error.png)
 
 ## 解决方法
 1. 请求的回调地址改为码云上配置的回调地址，并缓存当前的页面地址

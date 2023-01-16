@@ -28,7 +28,14 @@ hexo init
 
 文件名参考jekyll和VuePress的推荐格式, year-month-day-title.
 修改`_config.yml`配置项, 使创建的文件名为上述格式:
-`new_post_name: :year-:month-:day-:title.md # File name of new posts`
+```yaml
+# 设置文件名格式
+new_post_name: :year-:month-:day-:title.md
+# 启用资源文件夹,方便以后copy, 不启用
+# post_asset_folder: true
+```
+图片资源采用全局文件夹的形式,采用资源文件夹形式,主页上会请求不到资源,需要到具体页面里才能正常显示.
+图片资源目前按年划分,正常应该也不会很多.
 
 ```bash
 hexo new "Hexo quick start"
