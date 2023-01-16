@@ -43,6 +43,29 @@ hexo new "Hexo quick start"
 
 然后填写正文内容
 
+## 配置文件
+以下配置优先级从高到低, 高优先级覆盖低优先级.
+1. `_config.yml`项目配置文件 
+2. `_config.<theme_name>.yml`项目的主题配置文件
+3. `themes/<theme_name>/_config.yml`主题默认配置文件
+
+修改`_config.<theme_name>.yml`配置,需要重启服务才能生效
+
+## 使用next主题
+https://github.com/theme-next/hexo-theme-next
+[next 主题设置教程](https://theme-next.js.org/docs/theme-settings/)
+```bash
+cd <hexo project>
+git clone https://github.com/theme-next/hexo-theme-next themes/next
+```
+
+编辑`_config.yml`
+```yml
+theme: next
+```
+next的主要用法看`themes/next/_config.yml`里面的内容
+
+
 ## 本地测试
 
 ```bash

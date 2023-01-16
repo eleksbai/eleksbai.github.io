@@ -1,0 +1,13 @@
+# 语言
+language: zh-Hans
+# 图标
+favicon:
+  small: /favicon.png
+  medium: /favicon.png
+  apple_touch_icon: /favicon.png
+  safari_pinned_tab: /favicon.png
+  #android_manifest: /images/manifest.json
+  #ms_browserconfig: /images/browserconfig.xml
+
+# 看起来像双鱼座，但有明显的带阴影的柱块，看起来更敏感。
+scheme: Gemini
