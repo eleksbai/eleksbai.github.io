@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png">
+  <link rel="mask-icon" href="/favicon.png" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha256-Z1K5uhUaJXA7Ll0XrZ/0JhX4lAtZFpT6jkKrEDT0drU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"eleksbai.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.14.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="背景近期想重新整理一下博客了，作为自己的一些技术积累，方便自己日后翻阅，并且日后如果有了新的感悟可以进行迭代。以前使用Github Pages搞过（实际上只是折腾搭个博客，文档没写几篇，现在这个从历史经验看大概率也是这个下场），后来看了小林coding的使用vuepress搭建了个人博客，而且vue个人比较感兴趣所以打算采用vuepress重新整一下博客。因为vssue是官方维护的评论插件，所以打">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vssue gitee 使用教程">
+<meta property="og:url" content="https://eleksbai.github.io/fix-vssue-for-gitee/index.html">
+<meta property="og:site_name" content="Eleksbai的博客">
+<meta property="og:description" content="背景近期想重新整理一下博客了，作为自己的一些技术积累，方便自己日后翻阅，并且日后如果有了新的感悟可以进行迭代。以前使用Github Pages搞过（实际上只是折腾搭个博客，文档没写几篇，现在这个从历史经验看大概率也是这个下场），后来看了小林coding的使用vuepress搭建了个人博客，而且vue个人比较感兴趣所以打算采用vuepress重新整一下博客。因为vssue是官方维护的评论插件，所以打">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://eleksbai.github.io/images/2022/gitee-callback-error.png">
+<meta property="article:published_time" content="2022-11-09T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-22T06:00:44.539Z">
+<meta property="article:author" content="eleksbai">
+<meta property="article:tag" content="vuepress">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://eleksbai.github.io/images/2022/gitee-callback-error.png">
+
+
+<link rel="canonical" href="https://eleksbai.github.io/fix-vssue-for-gitee/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://eleksbai.github.io/fix-vssue-for-gitee/","path":"fix-vssue-for-gitee/","title":"vssue gitee 使用教程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>vssue gitee 使用教程 | Eleksbai的博客</title>
+  
+
+
+
+
+
+
+  <script async defer data-website-id="" src=""></script>
+
+  <script defer data-domain="" src=""></script>
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Eleksbai的博客</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">偶尔更新的博客</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%83%8C%E6%99%AF"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vuepress"><span class="nav-number">1.1.</span> <span class="nav-text">vuepress</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vssue"><span class="nav-number">1.2.</span> <span class="nav-text">vssue</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A0%81%E4%BA%91%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6"><span class="nav-number">1.3.</span> <span class="nav-text">码云评论插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">2.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">解决方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9vssue%E4%B8%ADapi-gitee-v5%E7%9A%84%E6%BA%90%E7%A0%81"><span class="nav-number">3.1.</span> <span class="nav-text">修改vssue中api-gitee-v5的源码,</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE%E7%9A%84enhanceApp-js"><span class="nav-number">3.2.</span> <span class="nav-text">修改博客项目的enhanceApp.js</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8"><span class="nav-number">4.</span> <span class="nav-text">应用</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">eleksbai</p>
+  <div class="site-description" itemprop="description">......</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">标签</span>
+      </div>
+  </nav>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://eleksbai.github.io/fix-vssue-for-gitee/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="eleksbai">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Eleksbai的博客">
+      <meta itemprop="description" content="......">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="vssue gitee 使用教程 | Eleksbai的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          vssue gitee 使用教程
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-11-10 00:00:00" itemprop="dateCreated datePublished" datetime="2022-11-10T00:00:00+08:00">2022-11-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-01-22 14:00:44" itemprop="dateModified" datetime="2023-01-22T14:00:44+08:00">2023-01-22</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>近期想重新整理一下博客了，作为自己的一些技术积累，方便自己日后翻阅，并且日后如果有了新的感悟可以进行迭代。<br>以前使用Github Pages搞过（实际上只是折腾搭个博客，文档没写几篇，现在这个从历史经验看大概率也是这个下场），<br>后来看了小林coding的使用vuepress搭建了个人博客，而且vue个人比较感兴趣所以打算采用vuepress重新整一下博客。<br>因为vssue是官方维护的评论插件，所以打算来用它作为评论系统，平台选择gitee即码云（国内的访问方便，现在代码仓库也基本用gitee了）。<br>应为这个vssue和gitee配合使用存在问题，才有了这篇文章。（希望作者维护一下， 毕竟我也不会整前端，只能搞个自用的解决方案）</p>
+<h3 id="vuepress"><a href="#vuepress" class="headerlink" title="vuepress"></a><a target="_blank" rel="noopener" href="https://vuepress.vuejs.org/zh/">vuepress</a></h3><p>Vue 驱动的静态网站生成器，类似于<a target="_blank" rel="noopener" href="https://jekyllrb.com/docs/github-pages/">GitHub Pages的jekyll</a>。<br>目前了解主要有两种应用，一种是文档， 一种是博客。</p>
+<h3 id="vssue"><a href="#vssue" class="headerlink" title="vssue"></a><a target="_blank" rel="noopener" href="https://vssue.js.org/zh/">vssue</a></h3><p>vuepress 官方开发的评论插件，利用git平台的issue功能来实现评论功能。<br>目前支持多个平台，包括 GitHub, GitLab, Bitbucket, Gitee 和 Gitea。<br>码云的插件为@vssue/api-gitee-v5</p>
+<h3 id="码云评论插件"><a href="#码云评论插件" class="headerlink" title="码云评论插件"></a><a target="_blank" rel="noopener" href="https://vssue.js.org/zh/guide/gitee.html">码云评论插件</a></h3><p>码云评论插件需要在码云平台上创建一个第三方应用来使用， 一般用户就可以，不需要使用企业版。</p>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>使用vssue+gitee搭的评论系统， 在登录时会提示无效的登录回调地址。<br>这是由于码云只支持单个的url地址回调导致的。<br>@vssue/api-gitee-v5插件在调用码云接口时采用的回调地址为当前的url地址，如<a target="_blank" rel="noopener" href="http://localhost:8080/2022/10/29/vuepress-quick-start/">http://localhost:8080/2022/10/29/vuepress-quick-start/</a><br>而一般码云上配置的应用回调地址为<a target="_blank" rel="noopener" href="http://localhost:8080/%E3%80%82%E8%BF%99%E4%B8%A4%E4%B8%AA%E7%9A%84url%E4%B8%8D%E5%8C%B9%E9%85%8D%E5%AF%BC%E8%87%B4%E4%BA%86%E7%A0%81%E4%BA%91%E8%AF%84%E8%AE%BA%E6%8F%92%E4%BB%B6%E6%97%A0%E6%B3%95%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A8%E3%80%82">http://localhost:8080/。这两个的url不匹配导致了码云评论插件无法正常使用。</a><br><a target="_blank" rel="noopener" href="https://vssue.js.org/zh/demo/gitee.html">官方demo</a>也存在这个问题，但是没有维护了。<br><img src="/images/2022/gitee-callback-error.png" alt="码云接口回调异常"></p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><ol>
+<li>请求的回调地址改为码云上配置的回调地址，并缓存当前的页面地址</li>
+<li>码云回调后自动到之前的缓存地址。</li>
+</ol>
+<h3 id="修改vssue中api-gitee-v5的源码"><a href="#修改vssue中api-gitee-v5的源码" class="headerlink" title="修改vssue中api-gitee-v5的源码,"></a>修改vssue中api-gitee-v5的源码,</h3><ol>
+<li>增加callbackURL参数, 此参数目前固定为当前的<code>window.location.protocol + &#39;//&#39; + window.location.host</code>即默认的主页地址.</li>
+<li>去掉proxy的参数, 当前gitee平台接口已经支持CORS,需要配置代理了.而且vssue默认配置的代理已经无法访问了.</li>
+<li>在向码云平台请求的接口的redirect_uri参数均改为callbackURL.</li>
+<li>在向码云进行应用授权时缓存当前路径的path.使用<code>sessionStorage.setItem(&#39;cacheOriginPath&#39;, this.getCurrentPath());</code></li>
+</ol>
+<h3 id="修改博客项目的enhanceApp-js"><a href="#修改博客项目的enhanceApp-js" class="headerlink" title="修改博客项目的enhanceApp.js"></a>修改博客项目的enhanceApp.js</h3><p>因为主页没有评论模块,所以vssue相关代码还没有初始化,无法处理缓存的path.(可能也有办法,但在博客项目改一下也简单)<br>如果当前有缓存的path, 则跳转到对应的path路径下.<br>enhanceApp.js</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">function getCacheOriginPath() &#123;</span><br><span class="line">    const cacheOriginPath = sessionStorage.getItem(&#x27;cacheOriginPath&#x27;);</span><br><span class="line">    sessionStorage.setItem(&#x27;cacheOriginPath&#x27;, &#x27;&#x27;);</span><br><span class="line">    console.log(`get cacheOriginPath  $&#123;cacheOriginPath&#125;`);</span><br><span class="line">    return cacheOriginPath || &#x27;&#x27;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">export default (&#123;</span><br><span class="line">                    Vue, // the version of Vue being used in the VuePress app</span><br><span class="line">                    options, // the options for the root Vue instance</span><br><span class="line">                    router, // the router instance for the app</span><br><span class="line">                    siteData // site metadata</span><br><span class="line">                &#125;) =&gt; &#123;</span><br><span class="line">    // ...apply enhancements to the app</span><br><span class="line">    console.log(&quot;enhanceApp ...&quot;,)</span><br><span class="line">    const cacheOriginPath = getCacheOriginPath()</span><br><span class="line">    if (cacheOriginPath) &#123;</span><br><span class="line">        console.log(&quot;change path&quot;, window.location.href, cacheOriginPath)</span><br><span class="line">        window.location.href = window.location.protocol + &#x27;//&#x27; + window.location.host + cacheOriginPath + window.location.search;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// http://localhost:8080/2022/10/29/vuepress-quick-start/</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><ol>
+<li>使用<code>@vuepress/theme-blog</code>搭建好博客, 引用<code>@vssue/api-gitee-v5</code>码云模块并做相应的配置.</li>
+<li>拉取修改过的vssue项目<code>git clone  git@gitee.com:eleksbai/vssue.git</code></li>
+<li>进入项目根路径安装依赖<code>cd vssue &amp;&amp; yarn install</code></li>
+<li>编译码云评论模块 <code>cd packages/@vssue/api-gitee-v5 &amp;&amp; yarn build</code></li>
+<li>在码云模块路径下将编译的码云链接到系统<code>yarn link</code></li>
+<li>进入到博客项目, 链接刚刚编译的码云模块<code>yarn link @vssue/api-gitee-v5</code></li>
+<li>运行博客项目测试效果<code>yarn dev</code></li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/vuepress/" rel="tag"># vuepress</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/vuepress-quick-start/" rel="prev" title="VurPress 快速开始">
+                  <i class="fa fa-chevron-left"></i> VurPress 快速开始
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/Hexo-quick-start/" rel="next" title="Hexo 快速开始">
+                  Hexo 快速开始 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2023</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">eleksbai</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
