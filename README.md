@@ -11,7 +11,8 @@
 # 本地调试
 hexo server
 # 部署到github
-hexo clean && hexo deploy
+hexo clean 
+hexo deploy
 # 提交代码
 git commit 
 ```
